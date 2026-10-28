@@ -23,7 +23,7 @@ module.exports = {
   PORT: Number.isInteger(Number(process.env.PORT)) && Number(process.env.PORT) > 0 ? Number(process.env.PORT) : 3099,
   // Mode maintenance bulanan: MAINTENANCE=1 menjadikan halaman utama
   // maintenance (route non-API), sementara semua /api/* tetap hidup.
-  MAINTENANCE: ["1", "true", "yes", "on"].includes(String(process.env.MAINTENANCE || "").toLowerCase()),
+  MAINTENANCE: ["1", "true", "yes", "on"].includes(String(process.env.MAINTENANCE || "1").toLowerCase()),
   REQUEST_TIMEOUT_MS: Number(process.env.REQUEST_TIMEOUT_MS) > 0 ? Number(process.env.REQUEST_TIMEOUT_MS) : 8000,
   // Beri source waktu cukup untuk menyelesaikan pagination dan alias search.
   SEARCH_BUDGET_MS: Number(process.env.SEARCH_BUDGET_MS) > 0 ? Number(process.env.SEARCH_BUDGET_MS) : 15000,
